@@ -193,6 +193,9 @@ function finish(){
 
     document.getElementById("input-capture").contentEditable = 'false';
     document.getElementById("input-capture").innerHTML = "...";
+
+    //set background to light grey
+    document.getElementById("input-box").style.backgroundColor = "rgba(255, 255, 255, 0.164)";
 }
 
 const inputCapture = document.getElementById("input-capture");
