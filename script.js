@@ -22,10 +22,12 @@ let elapsedMS;
 
 function KeyPressed(event){
     let code = event.code;
-    if(event.repeat && code == "Space"){
+
+    if(event.repeat && code == "Space" || event.altKey || event.enterKey){
         event.preventDefault();
         return;
     }
+    
     let text = captureText();
 
     if(event.code == "Space" || event.code == "Enter"){
@@ -41,7 +43,6 @@ function KeyPressed(event){
             incorrectWords ++;
             setWord(red);
         }
-        updateWPM();
 
         charIndex = 0;
         wordIndex ++;
@@ -92,10 +93,11 @@ function KeyPressed(event){
         charIndex ++;
     }
 
+    updateWPM();
 }
 
 function updateWPM(){
-    if(correctCharacters > 0){
+    if(correctCharacters > 0 && started){
         let words = correctCharacters / 5;
         let minutes = elapsedMS / 1000 / 60; // Minutes
         let wpm = words / minutes;
@@ -136,6 +138,8 @@ async function reset(){
     setTime("0:00");
     clearInput();
     setWPM(0);
+
+    document.getElementById("input-box").style.backgroundColor = "rgb(20, 26, 27)";
 }
 
 async function loadWords(){
