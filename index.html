@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Skill Issue</title>
+</head>
+<body onload="loadWords()">
+    <header>
+        <!-- contains title of page, author details maybe? -->
+        <ul>
+            <li class="title">
+                Type Fast -/
+            </li>
+            <li>
+                /<em>- Made by Daniel de Haan</em>
+            </li>
+        </ul>
+    </header>
+
+    <section class="typing-main">
+        <!-- contains  -->
+         <div class="typing-text" id="typing-text">
+            
+         </div>
+
+         <div class="input-box">
+            <!-- holds input box -->
+            <p contenteditable="true" id="input-capture"></p>
+         </div>
+
+         <div class="info">
+            <!-- holds current wpm, time and reset -->
+             <p id="wpm">
+                wpm:
+             </p>
+             <p id="timer">
+                0:00
+             </p>
+             <p onclick="reset()">
+                reset
+             </p>
+         </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+@font-face {
+    font-family: "cardiz-regular";
+    src: url("res/fonts/cadiz-regular.ttf");
+}
+
+@font-face {
+    font-family: "mackinac-book";
+    src: url("res/fonts/Mackinac-Book.otf");
+}
+
+body {
+    color: rgb(238, 234, 231);
+    text-align: center;
+    font-family: 'cardiz-regular';
+    background-color: rgb(32, 37, 41);
+}
+
+header {
+    font-size: 40px;
+    display: inline-flex;
+    margin-top: 100px;
+}
+
+header ul {
+    margin: 20px;
+    display: inline-flex;
+    list-style: none;
+}
+
+header ul li {
+    margin: 10px;
+}
+
+.typing-main {
+    width: 1000px;
+    margin: 100px auto 0 auto;
+    font-size: 30px;
+    /* text-align: left; */
+}
+
+.typing-main div {
+    /* margin: 10px; */
+    background-color: rgb(20, 26, 27);
+    border-radius: 5px;
+    outline: solid;
+    outline-color: rgba(255, 255, 255, 0.664);
+    outline-width: 2px;
+}
+
+.typing-text {
+    word-spacing: 6px;
+    text-align: left;
+    height: auto;
+    padding: 15px;
+}
+
+.input-box {
+    height: auto;
+    /* font-size: 35px; */
+    text-align: left;
+    white-space: nowrap;
+    transition: ease-in all 0.1s;
+}
+
+.input-box:hover {
+    background-color: rgba(255, 255, 255, 0.164);
+    transition: ease-in all 0.1s;
+}
+
+.input-box:focus-within {
+    outline-color: rgba(67, 180, 255, 0.623);
+    transition: ease-in all 0.1s;
+}
+
+
+.input-box p {
+    padding: 10px;
+    outline: none;
+    background-color: none;
+    background: none;
+}
+
+
+.info {
+    display: inline-flex;
+    text-align: center;
+    margin: auto;
+}
+
+.info p {
+    width: 200px;
+    display: flex;
+    margin: 5px;
+    border-radius: 3px;
+}
